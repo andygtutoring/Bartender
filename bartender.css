@@ -1,0 +1,163 @@
+/* bartender.css */
+.game-container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.customer-order {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.shaker-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.shaker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.ingredients-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.ingredient {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.ingredient.gin {
+  background-color: #3498db;
+}
+
+.ingredient.vodka {
+  background-color: #f1c40f;
+}
+
+.ingredient.rum {
+  background-color: #e74c3c;
+}
+
+.ingredient.lime-juice {
+  background-color: #2ecc71;
+}
+
+.ingredient.cola {
+  background-color: #9b59b6;
+}
+
+.pour {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    transform: scale(1);
+    will-change: transform;
+}
+
+.animate-pour {
+    animation: pour 2s ease-in-out;
+}
+
+@keyframes pour {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateX(50px) translateY(50px) scale(0.5);
+    }
+    50% {
+        transform: translateX(100px) translateY(150px) scale(0.2);
+    }
+    80% {
+        transform: translateX(150px) translateY(200px) scale(0.1);
+    }
+    100% {
+        transform: translateX(200px) translateY(250px) scale(0);
+    }
+}
+
+.pouring {
+  animation: pour 2s linear;
+}
+
+@keyframes pour {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.score-container {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+.pouring {
+  animation: pour 2s linear;
+}
+
+@keyframes pour {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150px);
+  }
+}
+
+.shaking {
+  animation: shake 1s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

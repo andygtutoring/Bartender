@@ -1,0 +1,37 @@
+<!-- bartender.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartender Game</title>
+    <link rel="stylesheet" href="bartender.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="customer-order">
+        <p id="order-text"></p>
+      </div>
+      <div class="shaker-container">
+        <div class="shaker"></div>
+        <div class="ingredients-container">
+          <div class="ingredient gin" data-ingredient="gin"></div>
+          <div class="ingredient vodka" data-ingredient="vodka"></div>
+          <div class="ingredient rum" data-ingredient="rum"></div>
+          <div class="ingredient lime-juice" data-ingredient="lime-juice"></div>
+          <div class="ingredient cola" data-ingredient="cola"></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="shake-button">Shake!</button>
+        <button id="serve-button">Serve!</button>
+      </div>
+      <div class="score-container">
+        <p id="score-text">Score: 0</p>
+      </div>
+    </div>
+
+    <script src="bartender.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  </body>
+</html>
